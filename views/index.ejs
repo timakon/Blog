@@ -8,7 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+<% if(!user.id && !user.login){%>
 <a href="/entrance">Вход</a>
 <a href="/registration">Регистрация</a>
+<% } else {%>
+<p>Привет <h1><%= user.login%></h1></p>
+<div><a href="/logout">Выход</a></div>
+<% } %>
 </body>
 </html>
